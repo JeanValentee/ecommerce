@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html
+        lang="pt_BR"
+        xmlns:th="http://www.thymeleaf.org"
+        th:replace="fragments/layout :: layout(~{::title}, ~{::link}, ~{::script}, ~{::main})"
+        xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>My Purchase</title>
+
+    <link rel="stylesheet" th:href="@{/resources/styles/purchase/myPurchase.css}">
+</head>
+<body>
+<main>
+    <div class="header">
+        <div class="card-logo">
+            <h1 class="logoGrossa">ANOTHER<span class="logoFina">BRAND</span></h1>
+        </div>
+        <div class="card-user">
+            <span class="mr-30" th:text="${user.name}"></span>
+        </div>
+
+        <div class="card-header">
+            <a class="mr-30" th:href="@{/product/TShirt}">T-SHIRTS</a>
+            <a class="mr-30" th:href="@{/product/Sneakers}">SNEAKERS</a>
+            <a class="mr-30" th:href="@{/product/Sweaters}">SWEATERS</a>
+            <a class="mr-30" th:href="@{/product/Pants}">PANTS</a>
+            <a class="mr-30" th:href="@{/product/Snapback}">SNAPBACK</a>
+            <a class="mr-30" th:href="@{/product/Shorts}">SHORTS</a>
+            <span class="mr-30">|</span>
+            <span class="mr-30">
+                <img th:src="@{/resources/images/search.png}" height="18px"/>
+            </span>
+
+        </div>
+        <div class="line1"></div>
+
+    </div>
+    <div class="page-container">
+        <div class="purchase-container">
+            <h1>My Shopping</h1>
+            <div th:each="purchase: ${purchases2}">
+                <div class="card">
+                    <span>
+                        <img th:src="'/RecuperarImagem?idProduct='+${purchase.product.idProduct}" />
+                    </span>
+                    <span>
+                        <p th:text="'Data de Compra: ' + ${purchase.date}"></p>
+                        <p th:text="'Preço Unitário: ' + '$' + ${purchase.product.price}"></p>
+                        <p th:text="'Quantidade: ' + ${purchase.quantity}"></p>
+                        <p class="total" th:text="'Total: $' + ${purchase.total}"></p>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="line2"></div>
+        <div>
+            <span class="mr-90 mt-50">
+                <h1>ADRESS</h1>
+                <p><img th:src="@{/resources/images/location.png}" height="20px"/>Fritz Jacobs Street, 1789, Boa Vista,</p>
+                <p>São José do Rio Preto, SP.</p>
+            </span>
+            <span class="mr-90 mt-50">
+                <h1>CONTACT</h1>
+                <p><img th:src="@{/resources/images/phone-call.png}" height="20px"/>(17) 3356-2426</p>
+                <p><img th:src="@{/resources/images/whatsapp.png}" height="20px"/>(17) 99254-2426</p>
+            </span>
+            <span class="mr-90 mt-50">
+                <h1>SOCIAL MEDIAS</h1>
+                <p><img th:src="@{/resources/images/instagram.png}" height="20px"/>@anotherbrand</p>
+                <p><img th:src="@{/resources/images/facebook.png}" height="20px"/>Another Brand Store</p>
+            </span>
+        </div>
+        <div class="shadow-line">
+
+        </div>
+    </div>
+
+</main>
+<script type="text/javascript" th:src="@{/resources/scripts/purchase/myPurchase.js}"></script>
+</body>
+</html>

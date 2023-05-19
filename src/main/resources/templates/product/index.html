@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html
+        lang="pt_BR"
+        xmlns:th="http://www.thymeleaf.org"
+        th:replace="fragments/layout :: layout(~{::title}, ~{::link}, ~{::script}, ~{::main})"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastrar</title>
+
+    <link rel="stylesheet" th:href="@{/resources/styles/product/index.css}">
+</head>
+<body>
+<main>
+    <div class="rectangle49"></div>
+    <div class="rectangle50"></div>
+    <div class="rectangle51"></div>
+    <div class="rectangle52"></div>
+    <div class="rectangle53"></div>
+    <div class="rectangle54"></div>
+    <div class="rectangle55"></div>
+    <div class="rectangle56"></div>
+    <div class="rectangle57"></div>
+    <div class="rectangle58"></div>
+    <div class="rectangle59"></div>
+    <div class="rectangle60"></div>
+    <div class="rectangle61"></div>
+    <div class="rectangle62"></div>
+    <div class="page-container">
+        <div class="left">
+            <div class="card-header">
+                <h1 class="logoGrossa">ANOTHER<span class="logoFina">BRAND</span></h1>
+                <a href="/home"> <i class="arrow"></i></a>
+            </div>
+        </div>
+        <div class="right">
+            <h2 class="shadow-text mb-20">REGISTER OF PRODUCTS</h2>
+            <p class="mb-75 normalLetter">Product Information</p>
+            <form action="product/index.html" th:action="@{/productRegister}" th:object="${product}" method="post" commandName="product" enctype="multipart/form-data">
+                <div class="form-container">
+                    <div class="field-container">
+                        <input
+                                type="text"
+                                class="input light"
+                                id="name-input"
+                                th:field="*{name}"
+                                placeholder="Name:"
+                                required
+                        >
+                        <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>
+                    </div>
+
+                    <div class="image">
+                        <h1 class="shadow-text">PICTURE</h1>
+                        <label for="file" class="pic-file">[...]</label>
+                        <input type="file" name="file" id="file"/>
+                    </div>
+
+                    <div class="field-container">
+                        <input
+                                type="text"
+                                class="input light"
+                                id="category-input"
+                                th:field="*{category.id_category}"
+                                placeholder="(1)T-SHIRT, (2)PANTS, (3)SWEATERS, (4)SNAPBACK, (5)SHORTS, (6)SNEAKERS:"
+                                required
+                        >
+                        <span th:if="${#fields.hasErrors('category.id_category')}" th:errors="*{category.id_category}"></span>
+                    </div>
+
+                    <div class="field-container">
+                        <input
+                                type="text"
+                                class="input light"
+                                id="price-input"
+                                th:field="*{price}"
+                                placeholder="Price($):"
+                                required
+                        >
+                        <span th:if="${#fields.hasErrors('price')}" th:errors="*{price}"></span>
+                    </div>
+
+                    <div class="field-container">
+                        <input
+                                type="text"
+                                class="input light"
+                                id="quantity-input"
+                                th:field="*{quantity}"
+                                placeholder="Quantity:"
+                                required
+                        >
+                        <span th:if="${#fields.hasErrors('quantity')}" th:errors="*{quantity}"></span>
+                    </div>
+
+                    <div class="field-container">
+                        <input
+                                type="text"
+                                class="input light"
+                                id="size-input"
+                                th:field="*{size}"
+                                placeholder="Size:"
+                                required
+                        >
+                        <span th:if="${#fields.hasErrors('size')}" th:errors="*{size}"></span>
+                    </div>
+
+                    <div class="field-container">
+                        <input
+                                type="text"
+                                class="input light"
+                                id="color-input"
+                                th:field="*{color}"
+                                placeholder="Color:"
+                                required
+                        >
+                        <span th:if="${#fields.hasErrors('color')}" th:errors="*{color}"></span>
+                    </div>
+
+                    <div class="field-container">
+                        <input
+                                type="text"
+                                class="input light"
+                                id="description-input"
+                                th:field="*{description}"
+                                placeholder="Description:"
+                                required
+                        >
+                        <span th:if="${#fields.hasErrors('description')}" th:errors="*{description}"></span>
+                    </div>
+
+                    <button type="submit" class="primary-button">REGISTER</button>
+                </div>
+            </form>
+            <p class="copyright">Copyright 2021 - AnotherBrand ltda.</p>
+        </div>
+    </div>
+</main>
+
+    <script type="text/javascript" th:src="@{/resources/scripts/product/productRegister.js}"></script>
+</body>
+</html>

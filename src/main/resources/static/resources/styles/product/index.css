@@ -1,0 +1,389 @@
+.page-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 40%;
+    height: 100%;
+    padding: 40px;
+}
+
+.label {
+    cursor: pointer;
+}
+
+#file {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.image {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 361px;
+    height: 318px;
+    left: 143px;
+    top: 369px;
+
+    border: 5px solid #373030;
+    box-sizing: border-box;
+}
+
+.card-header {
+    padding-top: 25px;
+    padding-left: 50px;
+    margin-bottom: 150px;
+}
+
+.arrow:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    width: 0;
+    height: 0;
+
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+    border-right: 9px solid #373030;
+}
+
+.logoFina {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 40px;
+    letter-spacing: 0.03em;
+    color: #000000;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+}
+
+.logoGrossa {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    letter-spacing: 0.03em;
+    color: #000000;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 100%;
+}
+
+.form-container{
+    width: 632.03px;
+    height: 500.1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.field-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 23px;
+    border-radius: 10px;
+}
+
+.shadow-text {
+    font-size: 40px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    color: #373030;
+    letter-spacing: 0.05em;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+
+}
+
+.normalLetter {
+    font-size: 25px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    color: #373030;
+    letter-spacing: 0.05em;
+    margin-top: -20px;
+}
+
+input {
+    width: 100%;
+    height: 43px;
+    border: none;
+    padding: 0px 0px 0px 20px;
+    border-radius: 10px;
+    outline: none;
+}
+
+.field-container input::placeholder {
+    color: #000000;
+    font-size: 16px;
+    opacity: 1;
+    font-weight: bolder;
+}
+
+.input[type=text] {
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.light {
+    background: #373030;
+    opacity: 0.4;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mb-75 {
+    margin-bottom: 75px;
+}
+
+.mb--20 {
+    margin-bottom: -30px;
+}
+
+.copyright {
+    position: absolute;
+    bottom: 20px;
+    font-size: 15px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.primary-button {
+    position: relative;
+    left: 10px;
+    height: 43px;
+    border: none;
+    background: #373030;
+    width: 652.03px;
+    padding: 15px 0px;
+    color: white;
+    margin-bottom: 20px;
+    border-radius: 10px;
+
+    transition: 0.25s;
+}
+
+.primary-button:hover {
+    cursor: pointer;
+
+    background: #211d1d;
+}
+
+.pic-file {
+    font-size: 40px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    color: #373030;
+    letter-spacing: 0.05em;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+
+    transition: 0.25s;
+}
+
+.pic-file:hover {
+    cursor: pointer;
+    font-weight:500;
+    color: #635c5c;
+
+}
+
+
+/* retangulos que formam o fundo */
+
+/* Rectangle 49 */
+
+.rectangle49 {
+    position: absolute;
+    width: 93px;
+    height: 1024px;
+    left: 50px;
+    top: 0px;
+
+    background: rgba(255, 0, 0, 0.1);
+}
+
+/* Rectangle 50 */
+
+.rectangle50 {
+    position: absolute;
+    width: 50px;
+    height: 1024px;
+    left: 0px;
+    top: 0px;
+
+    background: rgba(255, 0, 0, 0.1);
+}
+
+/* Rectangle 51 */
+
+.rectangle51 {
+    position: absolute;
+    width: 50px;
+    height: 1024px;
+    left: 1390px;
+    top: 0px;
+
+    background: rgba(255, 0, 0, 0.1);
+}
+
+/* Rectangle 52 */
+
+.rectangle52 {
+    position: absolute;
+    width: 93px;
+    height: 1024px;
+    left: 163px;
+    top: 0px;
+
+    background: rgba(255, 0, 0, 0.1);
+}
+
+/* Rectangle 53 */
+
+.rectangle53 {
+    position: absolute;
+    width: 92px;
+    height: 1024px;
+    left: 277px;
+    top: 0px;
+
+    background: rgba(255, 0, 0, 0.1);
+}
+
+/* Rectangle 54 */
+
+.rectangle54 {
+    position: absolute;
+    width: 93px;
+    height: 1024px;
+    left: 390px;
+    top: 0px;
+
+    background: rgba(255, 0, 0, 0.1);
+}
+
+/* Rectangle 55 */
+
+.rectangle55 {
+    position: absolute;
+    width: 92px;
+    height: 1024px;
+    left: 504px;
+    top: 0px;
+
+    background: rgba(255, 0, 0, 0.1);
+}
+
+/* Rectangle 56 */
+
+.rectangle56 {
+    position: absolute;
+    width: 93px;
+    height: 1024px;
+    left: 617px;
+    top: 0px;
+
+    background: rgba(255, 0, 0, 0.1);
+}
+
+/* Rectangle 57 */
+
+.rectangle57 {
+    position: absolute;
+    width: 93px;
+    height: 1024px;
+    left: 730px;
+    top: 0px;
+
+    background: rgba(255, 0, 0, 0.1);
+}
+
+/* Rectangle 58 */
+
+.rectangle58 {
+    position: absolute;
+    width: 92px;
+    height: 1024px;
+    left: 844px;
+    top: 0px;
+
+    background: rgba(255, 0, 0, 0.1);
+}
+
+/* Rectangle 59 */
+
+.rectangle59 {
+    position: absolute;
+    width: 93px;
+    height: 1024px;
+    left: 957px;
+    top: 0px;
+
+    background: rgba(255, 0, 0, 0.1);
+}
+
+/* Rectangle 60 */
+
+.rectangle60 {
+    position: absolute;
+    width: 92px;
+    height: 1024px;
+    left: 1071px;
+    top: 0px;
+
+    background: rgba(255, 0, 0, 0.1);
+}
+
+/* Rectangle 61 */
+
+.rectangle61 {
+    position: absolute;
+    width: 93px;
+    height: 1024px;
+    left: 1184px;
+    top: 0px;
+
+    background: rgba(255, 0, 0, 0.1);
+}
+
+/* Rectangle 62 */
+
+.rectangle62 {
+    position: absolute;
+    width: 93px;
+    height: 1024px;
+    left: 1297px;
+    top: 0px;
+
+    background: rgba(255, 0, 0, 0.1);
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html
+        lang="pt_BR"
+        xmlns:th="http://www.thymeleaf.org"
+        th:replace="fragments/layout :: layout(~{::title}, ~{::link}, ~{::script}, ~{::main})"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastrar</title>
+
+    <link rel="stylesheet" th:href="@{/resources/styles/signup/index.css}">
+</head>
+<body>
+<main>
+
+    <div class="rectangle49"></div>
+    <div class="rectangle50"></div>
+    <div class="rectangle51"></div>
+    <div class="rectangle52"></div>
+    <div class="rectangle53"></div>
+    <div class="rectangle54"></div>
+    <div class="rectangle55"></div>
+    <div class="rectangle56"></div>
+    <div class="rectangle57"></div>
+    <div class="rectangle58"></div>
+    <div class="rectangle59"></div>
+    <div class="rectangle60"></div>
+    <div class="rectangle61"></div>
+    <div class="rectangle62"></div>
+    <div class="page-container">
+
+        <div class="left">
+            <div class="card-header">
+                <h1 class="logoGrossa">ANOTHER<span class="logoFina">BRAND</span></h1>
+                <a href="/home"> <i class="arrow"></i></a>
+            </div>
+            <div class="signup">
+                <h2 class="shadow-text">REGISTER OF USERS</h2>
+                <p class="mb-10 normalLetter">Already registered,</p>
+                <a href="/login" class="link_login" th:href="@{/login}">LOGIN!</a>
+            </div>
+        </div>
+        <div class="right">
+            <h2 class="shadow-text mb-20">SIGN UP</h2>
+            <p class="mb-75 normalLetter">Access Registration</p>
+
+            <form action="index.html" th:action="@{/signup}" th:object="${user}" method="post">
+                <div class="form-container">
+
+                    <div class="field-container">
+                        <input
+                                type="text"
+                                class="input light"
+                                id="name-input"
+                                th:field="*{name}"
+                                placeholder="Full Name:"
+                                required
+                        >
+                        <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>
+                    </div>
+
+                    <div class="field-container">
+                        <input
+                                type="text"
+                                class="input light"
+                                id="email-input"
+                                th:field="*{email}"
+                                placeholder="Email:"
+                                required
+                        >
+                        <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span>
+                    </div>
+
+                    <div class="field-container">
+                        <input
+                                type="password"
+                                class="input light"
+                                id="password-input"
+                                th:field="*{password}"
+                                placeholder="Access Password:"
+                                required
+                        >
+                        <span th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></span>
+                    </div>
+
+                    <div class="field-container">
+                        <input  id="confirm-password-input" class="input light" type="password" placeholder="Confirm Access Password:" required>
+                        <span id="confirm-password-error" hidden>As senhas não coincidem</span>
+                    </div>
+
+                    <div class="field-container">
+                        <input
+                                type="text"
+                                class="input light"
+                                id="cpf-input"
+                                th:field="*{cpf}"
+                                placeholder="CPF:"
+                                required
+                        >
+                        <span th:if="${#fields.hasErrors('cpf')}" th:errors="*{cpf}"></span>
+                    </div>
+
+                    <div class="field-container">
+                        <input
+                                type="text"
+                                class="input light"
+                                id="address-input"
+                                th:field="*{address}"
+                                placeholder="Address:"
+                                required
+                        >
+                        <span th:if="${#fields.hasErrors('address')}" th:errors="*{address}"></span>
+                    </div>
+
+                    <button type="submit" class="primary-button">SIGN IN</button>
+                </div>
+            </form>
+            <p class="copyright">Copyright 2021 - AnotherBrand ltda.</p>
+        </div>
+    </div>
+
+    <div th:if="${message} != null" th:object="${message}" th:class="*{type}" id="toast">
+        <span th:text="*{title}">Title</span>
+        <span th:text="*{message}">Message</span>
+    </div>
+
+</main>
+
+    <script type="text/javascript" th:src="@{/resources/scripts/user/signup.js}"></script>
+</body>
+</html>
